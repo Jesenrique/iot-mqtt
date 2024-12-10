@@ -1,0 +1,65 @@
+.device-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 12px; /* Bordes redondeados */
+  margin: 16px 0; /* Espaciado vertical entre tarjetas */
+  transition: all 0.3s ease-in-out; /* Transición suave para hover */
+  overflow: hidden; /* Elimina bordes sobresalientes */
+}
+
+.device-card:hover {
+  transform: scale(1.03); /* Efecto de aumento al pasar el cursor */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más grande al hacer hover */
+}
+
+.card-header {
+  background-color: #3500f5; /* Azul celeste */
+  color: white; /* Texto blanco */
+  padding: 16px;
+  border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+  color: #ffffff; /* Títulos en blanco */
+}
+
+.card-subtitle {
+  font-size: 1rem; /* Tamaño estándar */
+  font-weight: normal; /* Peso normal */
+  opacity: 0.9; /* Texto más suave */
+  color: #ffffff; /* Subtítulos en blanco */
+}
+
+.card-content {
+  padding: 16px;
+  background-color: #f0f8ff; /* Fondo inferior azul claro */
+  color: #333; /* Texto principal oscuro */
+  border-radius: 0 0 8px 8px; /* Bordes redondeados solo abajo */
+  
+  /* Centrando el contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centra el contenido horizontalmente */
+  justify-content: center;  /* Centra el contenido verticalmente (si solo hay icono) */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+.card-content p {
+  font-size: 1rem; /* Tamaño estándar */
+  color: #5a5a5a; /* Texto suave */
+  line-height: 1.5; /* Espaciado entre líneas */
+  margin-bottom: 8px; /* Espaciado entre párrafos */
+}
+
+.card-content p strong {
+  font-weight: bold; /* Resaltar los títulos dentro del contenido */
+  color: #3500f5; /* Azul celeste para destacar */
+}
+
+.icon {
+  width: 60px;  /* Ajusta el tamaño del icono */
+  height: 60px; /* Ajusta el tamaño del icono */
+  margin-top: 10px;  /* Espaciado opcional entre el texto y el icono */
+}

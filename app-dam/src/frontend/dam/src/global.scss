@@ -1,0 +1,62 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+
+.page-background {
+    background: linear-gradient(135deg, #eaf6ff 0%, #d4e9ff 100%); /* Gradiente sutil */
+    min-height: 100vh; /* Ocupa toda la altura de la página */
+    padding: 16px; /* Espaciado para evitar que las tarjetas toquen los bordes */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las tarjetas horizontalmente */
+    justify-content: flex-start; /* Alinea las tarjetas al inicio */
+    overflow-y: auto; /* Permite el desplazamiento si hay muchas tarjetas */
+  }
+  
+  .page-background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'); /* Patrón sutil */
+    opacity: 0.2; /* Hace el patrón discreto */
+    z-index: -1; /* Envía el patrón detrás del contenido */
+  }
+  

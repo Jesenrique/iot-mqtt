@@ -1,0 +1,16 @@
+<a [routerLink]="['/mediciones', dispositivo.dispositivoId]" [queryParams]="{estado: dispositivo.estado}" style="text-decoration: none;">
+  <ion-card class="device-card">
+    <ion-card-header class="card-header">
+      <ion-card-title class="card-title">{{ dispositivo?.nombre }}</ion-card-title>
+      <ion-card-subtitle class="card-subtitle">Dispositivo {{ dispositivo?.dispositivoId }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="card-content">
+      <p><strong>Ubicación:</strong> {{ dispositivo?.ubicacion }}</p>
+      <p><strong>Electroválvula ID:</strong> {{ dispositivo?.electrovalvulaId }}</p>
+
+      <img appCambiarIcono [estado]="dispositivo?.estado" alt="Icono" class="icon" />
+      
+    </ion-card-content>
+  </ion-card>
+</a>
