@@ -12,7 +12,7 @@ Este proyecto es una aplicación desarrollada en Ionic Framework diseñada para 
   - ID del dispositivo
   - Estado (Encendido o Apagado)
 
-![home.png](imagenes\home.png) <!-- Imagen 1 de ejemplo -->
+![home.png](imagenes/home.png) <!-- Imagen 1 de ejemplo -->
 
 ### 2. Página de información del dispositivo
 - Al seleccionar cualquier tarjeta en la página principal, el usuario es redirigido a una página con detalles específicos del dispositivo.
@@ -22,7 +22,7 @@ Este proyecto es una aplicación desarrollada en Ionic Framework diseñada para 
   - Cambiar el estado del dispositivo (Encender o Apagar).
   - Acceder al historial de mediciones de humedad.
 
-![Información del dispositivo](imagenes\info.png) <!-- Imagen 2 de ejemplo -->
+![Información del dispositivo](imagenes/info.png) <!-- Imagen 2 de ejemplo -->
 
 ### 3. Página de historial de mediciones
 - Si se selecciona la opción de historial en la página de información del dispositivo, se muestra una lista con todas las mediciones registradas por el dispositivo.
@@ -30,7 +30,7 @@ Este proyecto es una aplicación desarrollada en Ionic Framework diseñada para 
   - Valor de la medición de humedad.
   - Fecha correspondiente a la medición.
 
-![log](imagenes\log.png) <!-- Imagen 3 de ejemplo -->
+![log](imagenes/log.png) <!-- Imagen 3 de ejemplo -->
 
 Navega por las páginas disponibles para consultar la información de los dispositivos y sus mediciones.
 
