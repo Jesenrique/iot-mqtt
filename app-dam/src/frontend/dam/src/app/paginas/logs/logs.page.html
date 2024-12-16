@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      HISTORIAL DEL DISPOSITIVO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let medicion of mediciones; let i = index" class="device-card">
+    <ion-label>
+      <strong>Humedad:</strong> {{ medicion?.valor }}
+    </ion-label>
+    <ion-label>
+      <strong>Fecha de captura:</strong> {{ medicion.fecha | formatoFecha }}
+    </ion-label>
+  </ion-item>
+</ion-content>
+
