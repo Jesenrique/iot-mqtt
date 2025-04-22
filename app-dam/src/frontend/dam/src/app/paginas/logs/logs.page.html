@@ -9,7 +9,8 @@
 <ion-content [fullscreen]="true">
   <ion-item *ngFor="let medicion of mediciones; let i = index" class="device-card">
     <ion-label>
-      <strong>Humedad:</strong> {{ medicion?.valor }}
+      <strong>Humedad:</strong> {{ medicion?.humedad }}
+      <strong>Temperatura:</strong> {{ medicion?.temperatura }}
     </ion-label>
     <ion-label>
       <strong>Fecha de captura:</strong> {{ medicion.fecha | formatoFecha }}

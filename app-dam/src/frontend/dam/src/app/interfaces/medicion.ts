@@ -1,5 +1,8 @@
 export interface Medicion {
-    fecha: string,
-    valor: string,
-    dispositivoId: number,
-}
+    medicionId: number;
+    dispositivoId: number;
+    fecha: string;
+    temperatura: string;
+    humedad: string;
+  }
+  

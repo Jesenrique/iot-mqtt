@@ -32,7 +32,7 @@ services:
         image:                   phpmyadmin/phpmyadmin
         environment: 
             PMA_HOST:            mysql-server
-            PMA_PORT:            3305
+            PMA_PORT:            3306
             MYSQL_ROOT_PASSWORD: userpass
         container_name:          mysql-admin
         networks:

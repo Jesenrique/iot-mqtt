@@ -21,8 +21,15 @@ export class MedicionesPage implements OnInit {
   
   id: number | null = null;
   estado: number | null = null;
-  medicionObject: Medicion = { fecha: '', valor: '', dispositivoId: 0 };
-  medicion: any;
+  medicionObject: Medicion = {
+    medicionId: 0,
+    dispositivoId: 0,
+    fecha: '',
+    temperatura: '',
+    humedad: ''
+  };
+  medicion: Medicion[] = [];
+
   data:object={};
 
   constructor(private _medicionService: MedicionesService, private route: ActivatedRoute, 
@@ -37,25 +44,28 @@ export class MedicionesPage implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.id = Number(params.get('id'));
       console.log('ID recibido:', this.id);
-      this.postMedicion(this.id);
+      this.getUltimaMedicion(this.id);
     });
   }
 
-  postMedicion (id:number) {
-    this.medicionObject={
-      fecha: new Date().toISOString().slice(0, 19).replace('T', ' '),
-      valor: this.generarRandom().toString(),
-      dispositivoId: id,
-    }
-
-    this.medicion= this._medicionService.postMedicion(this.medicionObject).
-      then((data) => {
-      console.log(data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  } 
+  getUltimaMedicion(id: number) {
+    this._medicionService.getUltimaMedicion(id)
+      .then((ultima) => {
+        console.log('Última medición recibida:', ultima);
+        this.medicionObject = {
+          medicionId: ultima.medicionId,
+          dispositivoId: ultima.dispositivoId,
+          fecha: ultima.fecha,
+          temperatura: ultima.temperatura,
+          humedad: ultima.humedad
+        };
+      })
+      .catch((error) => {
+        console.error('Error al obtener la última medición:', error);
+      });
+  }
+  
+  
 
   cambiarEstado(){
     if (this.estado==0){
@@ -68,14 +78,14 @@ export class MedicionesPage implements OnInit {
       id:this.id,
       estado:this.estado
     }
-
+/*
     this._dispositivoService.putEstadoDispositivo(this.data).
     then((data) => {
       console.log(data)
     })
     .catch((error) => {
       console.log(error)
-    })
+    })*/
   }
 
   //genera numero aleatorio de 80 a 50
